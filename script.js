@@ -111,7 +111,7 @@ function moveball()
     checkhit()
 }
 
-time=setInterval(moveball,30)
+time=setInterval(moveball,45)
 function checkhit()
 {
     //check block
