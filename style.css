@@ -1,0 +1,44 @@
+*
+{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-image: url(https://thumbs.dreamstime.com/b/space-wallpaper-banner-background-stunning-view-cosmic-galaxy-planets-space-objects-elements-image-space-209227412.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.game
+{
+    border: 5px solid rgba(22, 1, 13, 0.932);
+    width:800px;
+    height:500px;
+    display: flex;
+    margin:auto;
+    margin-top:20px;
+    position: relative;
+}
+.block
+{
+    width:100px;
+    background-color: red;
+    height:30px;
+    position: absolute;
+}
+.user
+{
+    width:200px;
+    background-color: blue;
+    height:30px;
+    position: absolute;
+}
+.ball
+{
+    width:30px;
+    height:30px;
+    border-radius: 15px;
+    background-color: green;
+    position: absolute;
+}
