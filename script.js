@@ -9,7 +9,7 @@ const ballstart=[390,50]
 const boardheight=490
 let ballpos=ballstart
 let position=start
-let time
+let timeset=window.prompt("Bạn hãy chọn số giây quả bóng chạy\r\nThời gian là ms: Normal là 45ms")
 let x=10
 let y=10
 let res=0
@@ -110,8 +110,31 @@ function moveball()
     drawball()
     checkhit()
 }
+let choice
+let button=document.querySelectorAll('button')
+button.forEach(button => button.addEventListener('click',(e)=>
+{
+    choice=e.target.id
+    console.log(choice)
+    if(timeset===null)
+    {
+        alert("Bạn chưa chọn tốc độ bóng vui lòng chọn hihi")
+        window.location.reload();
+    }
+    else{if(choice==='yes')
+    yesfunction()
+    else nofunction()
+    }
+}))
+function yesfunction()
+{
+    time=setInterval(moveball,timeset)
+}
+function nofunction()
+{
+    clearInterval(time)
+}
 
-time=setInterval(moveball,45)
 function checkhit()
 {
     //check block
@@ -153,6 +176,7 @@ function checkhit()
         score.innerHTML='You lose'
         document.removeEventListener('keydown',move)
         alert('Non hehe')
+        window.location.reload();
     }
 }
 
